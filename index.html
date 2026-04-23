@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>сибнет хуита</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background:#000; margin:5px;">
+        <div class="iframe-container tab-content" id="video">
+            <iframe src="https://video.sibnet.ru/shell.php?videoid=" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <div class="button-container">
+                <button class="control tabs" onclick="randomPreviews();">PREVIEWS</button>
+                <button class="control" onclick="randomizeVideo();">Random Video</button>
+                <button class="control infoblock"> ID: </button>
+                <input class="control" id="id-input" type="number" maxlength="7">
+                <button class="control" onclick="applyID();">Apply ID</button>
+                <button class="control" id="copy-id" onclick="copyURL();">Copy URL</button>
+                <button class="control" id="copy-id" onclick="newTabVideo();">New Tab</button>
+            </div>
+        </div>
+        <div class="tab-content active" id="previews">
+            <div class="searcher"></div>
+            <div class="button-container">
+                <button class="control tabs" onclick="randomVideo();">VIDEO</button>
+                <button class="control" onclick="randomSeed();">Random Seed</button>
+                <button class="control infoblock"> Seed: </button>
+                <input class="control" id="seed-input" type="number" maxlength="6">
+                <button class="control" onclick="applySelectedSeed();">Apply Seed</button>
+                <button class="control" onclick="applyNextSeed();">Next Seed</button>
+                <button class="control infoblock"> Range: </button>
+                <button class="control infoblock" id="id-range"></button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
